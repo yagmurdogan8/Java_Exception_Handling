@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class DivideThrow {
+    public static void main(String [] args){
+
+        try{
+
+            Scanner scan = new Scanner(System.in);
+
+            System.out.print("Enter the numerator: ");
+            int numerator = scan.nextInt();
+
+            System.out.print("Enter the denominator: ");
+            int denominator = scan.nextInt();
+
+            if (denominator == 0){
+
+                throw new ArithmeticException ("Denominator can't be zero!");
+
+            }
+            else{
+
+                System.out.println("The result of the dividing operation: " + (numerator / denominator));
+
+            }
+
+        }
+            catch (Exception ArithmeticException){
+
+                System.out.println("Denominator can't be zero!");
+
+            }
+    }
+}
